@@ -3,7 +3,7 @@ nav {
   justify-content: center;
 
   width: 100%;
-  background-color: #2A2D37;
+  background-color: var(--blue);
   height: 64px;
 }
 
@@ -19,7 +19,7 @@ nav .container {
 }
 
 nav .container a {
-  color: #F5FAFF;
+  color: var(--white);
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
