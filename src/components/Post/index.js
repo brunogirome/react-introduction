@@ -1,32 +1,29 @@
 import React from 'react';
 import './styles.css';
 
-import avatar from '../../../assets/woman.png';
-
 import Comment from '../Comment';
 
-function Post() {
+function Post({ author, date, content, comments }) {
   return (
     <article>
       <header>
-        <img src={avatar} alt="avatar" />
+        <img src={author.avatar} alt="avatar" />
         <div className="name">
-          <a href="">Ana Júlia</a>
-          <span>November 01, 2005</span>
+          <a href="">{author.name}</a>
+          <span>{date}</span>
         </div>
       </header>
-      <div className="content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia illo
-        aut optio quae maxime quisquam laboriosam voluptates distinctio
-        recusandae, deserunt hic omnis inventore animi dolor sunt quam maiores
-        laborum.
-      </div>
+      <div className="content">{content}</div>
 
-      <div className="divider" />
+      {comments.length > 0 && <div className="divider" />}
 
-      <Comment />
-      <Comment />
-      <Comment />
+      {comments.map(comment => (
+        <Comment
+          key={comment.id}
+          author={comment.author}
+          content={comment.content}
+        />
+      ))}
     </article>
   );
 }

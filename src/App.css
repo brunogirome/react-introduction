@@ -16,3 +16,7 @@ html {
   color: var(--white);
   font-family: 'Roboto', sans-serif;
 }
+
+body {
+  padding-bottom: 20px;
+}
