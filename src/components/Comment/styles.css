@@ -1,0 +1,31 @@
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.comment-container img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment {
+  width: 622px;
+  border-radius: 20px;
+  padding: 10px 15px;
+  
+  background-color: var(--black-2);
+
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--white-2);
+}
+
+.comment span {
+  color: var(--white);
+  font-weight: bold;
+}
